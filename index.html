@@ -283,112 +283,85 @@
 
             <!-- Subsection 3 -->
             <h3 class="title is-4 has-text-centered">Customized T2V Generation</h3>
+            <p></p>
             
             <!-- Concept Bank Image -->
             <figure style="text-align: center;">
-              <img src="pics/concept_bank.png" alt="Concept Bank" width="2500" />
+              <img src="./assets/concept_bank.png" alt="Concept Bank" width="1000" style="max-width: 100%; height: auto;" />
               <figcaption style="font-size: 13px; text-align: center; margin-top: 5px;">
-                <p style="font-weight: bold;">Concept Bank</p>
+                <p style="font-weight: bold; margin-bottom: 4px;">Concept Bank</p>
               </figcaption>
             </figure>
             
-            <!-- Carousel Wrapper -->
-            <div style="position: relative; width: 100%; max-width: 2500px; margin: 0 auto; padding-top: 20px;">
-              
-              <!-- Arrow Buttons -->
-              <button id="prevBtn" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #eee; border: none; font-size: 24px; padding: 10px; cursor: pointer; z-index: 10;">&#10094;</button>
-              <button id="nextBtn" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: #eee; border: none; font-size: 24px; padding: 10px; cursor: pointer; z-index: 10;">&#10095;</button>
+            <!-- T2V Video Carousel -->
+            <div class="container" style="min-height: 224px; margin-top: 20px;">
+              <div id="t2vCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div class="carousel-inner">
             
-              <!-- Carousel Inner -->
-              <div id="carouselTrack" style="display: flex; transition: transform 0.5s ease; overflow: hidden;">
-            
-                <!-- Slide 1 -->
-                <div class="carousel-slide" style="min-width: 100%;">
-                  <div class="columns is-centered is-vcentered is-mobile">
-                    <div class="column">
-                      <video width="100%" controls>
-                        <source src="videos/vid1.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="column">
-                      <video width="100%" controls>
-                        <source src="videos/vid2.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="column">
-                      <video width="100%" controls>
-                        <source src="videos/vid3.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="column">
-                      <video width="100%" controls>
-                        <source src="videos/vid4.mp4" type="video/mp4">
-                      </video>
-                    </div>
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <table width="100%" align="center">
+                      <tbody>
+                        <tr>
+                          <th><video width="224" autoplay loop muted src="./assets/results/vid1.mp4"></video></th>
+                          <th><video width="224" autoplay loop muted src="./assets/results/vid2.mp4"></video></th>
+                          <th><video width="224" autoplay loop muted src="./assets/results/vid3.mp4"></video></th>
+                          <th><video width="224" autoplay loop muted src="./assets/results/vid4.mp4"></video></th>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="text-align: center; padding-top: 10px;">
+                            <div class="caption">Visual results of customized T2V generation from various subject prompts</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <p style="font-size: 13px; text-align: center; font-weight: bold; margin-top: 10px;">
-                    Visual examples of customized T2V generation (Set 1)
-                  </p>
+            
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <table width="100%" align="center">
+                      <tbody>
+                        <tr>
+                          <th><video width="224" autoplay loop muted src="./assets/results/vid5.mp4"></video></th>
+                          <th><video width="224" autoplay loop muted src="./assets/results/vid6.mp4"></video></th>
+                          <th><video width="224" autoplay loop muted src="./assets/results/vid7.mp4"></video></th>
+                          <th><video width="224" autoplay loop muted src="./assets/results/vid8.mp4"></video></th>
+                        </tr>
+                        <tr>
+                          <td colspan="4" style="text-align: center; padding-top: 10px;">
+                            <div class="caption">Each video accurately follows the prompt with subject consistency and dynamic motion</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            
+                  <!-- Add more slides here if needed -->
+            
                 </div>
             
-                <!-- Slide 2 -->
-                <div class="carousel-slide" style="min-width: 100%;">
-                  <div class="columns is-centered is-vcentered is-mobile">
-                    <div class="column">
-                      <video width="100%" controls>
-                        <source src="videos/vid5.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="column">
-                      <video width="100%" controls>
-                        <source src="videos/vid6.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="column">
-                      <video width="100%" controls>
-                        <source src="videos/vid7.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="column">
-                      <video width="100%" controls>
-                        <source src="videos/vid8.mp4" type="video/mp4">
-                      </video>
-                    </div>
+                <!-- Carousel Controls -->
+                <a class="carousel-control-prev" href="#t2vCarousel" role="button" data-slide="prev">
+                  <div class="slider-navigation-previous" style="top: 40%">
+                    <svg viewBox="0 0 50 80" xml:space="preserve">
+                      <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+                    </svg>
                   </div>
-                  <p style="font-size: 13px; text-align: center; font-weight: bold; margin-top: 10px;">
-                    Visual examples of customized T2V generation (Set 2)
-                  </p>
-                </div>
-            
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#t2vCarousel" role="button" data-slide="next">
+                  <div class="slider-navigation-next" style="top: 40%">
+                    <svg viewBox="0 0 50 80" xml:space="preserve">
+                      <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+                    </svg>
+                  </div>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
             </div>
-            
-            <!-- JavaScript to control carousel -->
-            <script>
-              const track = document.getElementById('carouselTrack');
-              const prevBtn = document.getElementById('prevBtn');
-              const nextBtn = document.getElementById('nextBtn');
-              let currentSlide = 0;
-              const totalSlides = 2;
-            
-              function updateCarousel() {
-                track.style.transform = `translateX(-${currentSlide * 100}%)`;
-              }
-            
-              prevBtn.addEventListener('click', () => {
-                if (currentSlide > 0) {
-                  currentSlide--;
-                  updateCarousel();
-                }
-              });
-            
-              nextBtn.addEventListener('click', () => {
-                if (currentSlide < totalSlides - 1) {
-                  currentSlide++;
-                  updateCarousel();
-                }
-              });
-            </script>
+
 
 
 
