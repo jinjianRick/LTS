@@ -153,7 +153,7 @@
             <p>
             </p>
             <figure style="text-align: center;">
-              <img src="pics/fine_tuning_framework.png" alt="Concept Representation" style="width: 100%; height: auto;"  />
+              <img src="pics/fine_tuning_framework.png" alt="Concept Representation" width="800"  />
               <figcaption style="font-size: 13px;">  
                  <p style="font-weight: bold;">Fine-tuning framework of the proposed LaTexBlend.</p> LaTexBlend customizes each concept individually and stores it in a concept bank with compact latent textual features in LTS, serving as a 
                 general concept representation for versatile customized generation tasks.</figcaption>
@@ -162,32 +162,38 @@
             <!-- Subsection 2 -->
             <h3 class="title is-4 has-text-centered">Customized T2I Generation</h3>
             <p>
-              The latent textual space, positioned after the text encoder and a linear projection, serves as an efficient fusion layer for multiple concepts.
-              It avoids early interference while retaining concept-specific features.
             </p>
             <figure style="text-align: center;">
-              <img src="pics/t2i_pipeline.png" alt="Latent Textual Space" width="800" />
-              <figcaption style="font-size: 13px;">Structure of the latent textual space for customized concept fusion.</figcaption>
+              <img src="pics/t2i_pipeline.png" alt="Latent Textual Space" width="1500" />
+              <figcaption style="font-size: 13px;">
+                <p style="font-weight: bold;">LaTexBlend-I: Inference pipeline for customized T2I generation.</p> 
+                Concepts from the bank can be seamlessly combined in the Latent Textual Space for multi-concept customized T2I generation.
+                The blending is achieved through latent feature replacement and can be further enhanced with blending guidance.</figcaption>
             </figure>
 
             <!-- Subsection 3 -->
             <h3 class="title is-4 has-text-centered">Customized Grounded T2I Generation</h3>
             <p>
-              During inference, multiple customized concepts can be dynamically blended within the latent textual space, enabling flexible multi-concept generation without additional fine-tuning.
             </p>
             <figure style="text-align: center;">
-              <img src="pics/gt2i_pipeline.png" alt="Concept Blending" width="800" />
-              <figcaption style="font-size: 13px;">On-the-fly blending of multiple concepts at inference time.</figcaption>
+              <img src="pics/gt2i_pipeline.png" alt="Concept Blending" width="1500" />
+              <figcaption style="font-size: 13px;">
+                <p style="font-weight: bold;">LaTexBlend-G: Inference pipeline for customized ground T2I generation.</p> 
+                LaTexBlend-G achieves customized grounded T2I generation that involves synthesizing multiple customized concepts in specified regions. 
+                Concepts from the bank are blended in Latent Textual Space and processed through Local Cross-Attention mechanisms.
+                The local latents are integrated into a base latent by a Dynamic Aggregator to seamlessly render the concepts in the target regions.</figcaption>
             </figure>
 
             <!-- Subsection 4 -->
             <h3 class="title is-4 has-text-centered">Customized T2V Generation</h3>
             <p>
-              The fused representation is passed through the diffusion model to generate high-fidelity, layout-consistent images containing all customized concepts.
             </p>
             <figure style="text-align: center;">
-              <img src="pics/t2v_pipeline.png" alt="Final Generation" width="800" />
-              <figcaption style="font-size: 13px;">Output results demonstrating fidelity and coherence of generated images.</figcaption>
+              <img src="pics/t2v_pipeline.png" alt="Final Generation" width="1500" />
+              <figcaption style="font-size: 13px;">
+                <p style="font-weight: bold;">LaTexBlend-V: Inference pipeline for customized T2V generation.</p> 
+                Concept representations obtained from T2I fine-tuning can be seamlessly combined in the Latent Textual Space 
+                for direct multi-concept customized T2V inference, without the need for any additional tuning.</figcaption>
             </figure>
 
           </div>
