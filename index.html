@@ -215,51 +215,44 @@
           <div class="content has-text-justified">
 
             <!-- Subsection 1 -->
-            <h3 class="title is-4 has-text-centered" >Single-concept Customization</h3>
-            <p>
-            </p>
-            <figure style="text-align: center;">
-              <img src="pics/fine_tuning_framework.png" alt="Concept Representation" width="1300"  />
-              <figcaption style="font-size: 13px;">  
-                 <p style="font-weight: bold;">Fine-tuning framework of the proposed LaTexBlend.</p> LaTexBlend customizes each concept individually and stores it in a concept bank with compact latent textual features in LTS, serving as a 
-                general concept representation for versatile customized generation tasks.</figcaption>
-            </figure>
-
-            <!-- Subsection 2 -->
             <h3 class="title is-4 has-text-centered" >Customized T2I Generation</h3>
             <p>
             </p>
             <figure style="text-align: center;">
-              <img src="pics/t2i_pipeline.png" alt="Latent Textual Space" width="1500" />
+              <img src="pics/comparison_t2i.png" alt="Latent Textual Space" width="1500" />
               <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">LaTexBlend-I: Inference pipeline for customized T2I generation.</p> 
-                Concepts from the bank can be seamlessly combined in the Latent Textual Space for multi-concept customized T2I generation.
-                The blending is achieved through latent feature replacement and can be further enhanced with blending guidance.</figcaption>
+                <p style="font-weight: bold;">Visual comparison of customized T2I generation.</p> 
+                We compare LaTexBlend-I with recent, competitive baselines. The baselines exhibit issues like subject omission and 
+                significant degradation in concept fidelity.
+                In contrast, LaTexBlend-I renders multiple subjects to the query context with high fidelity and coherent layouts, 
+                while also capturing complex semantics such as inter-subject interactions and actions.
+              </figcaption>
             </figure>
 
-            <!-- Subsection 3 -->
+            <!-- Subsection 2 -->
             <h3 class="title is-4 has-text-centered" >Customized Grounded T2I Generation</h3>
             <p>
             </p>
             <figure style="text-align: center;">
-              <img src="pics/gt2i_pipeline.png" alt="Concept Blending" width="1500" />
+              <img src="pics/comparison_gt2i.png" alt="Concept Blending" width="1500" />
               <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">LaTexBlend-G: Inference pipeline for customized ground T2I generation.</p> 
-                LaTexBlend-G achieves customized grounded T2I generation that involves synthesizing multiple customized concepts in specified regions. 
-                Concepts from the bank are blended in Latent Textual Space and processed through Local Cross-Attention mechanisms.
-                The local latents are integrated into a base latent by a Dynamic Aggregator to seamlessly render the concepts in the target regions.</figcaption>
+                <p style="font-weight: bold;">Visual comparison of customized grounded T2I generation.</p> 
+                Baselines typically suffer from issues such as subject omission and degradation of concept fidelity.
+                LaTexBlend-G can generate customized subjects in the target regions with high concept fidelity and prompt adherence.
+              </figcaption>
             </figure>
 
-            <!-- Subsection 4 -->
+            <!-- Subsection 3 -->
             <h3 class="title is-4 has-text-centered" >Customized T2V Generation</h3>
             <p>
             </p>
             <figure style="text-align: center;">
-              <img src="pics/t2v_pipeline.png" alt="Final Generation" width="1500" />
+              <img src="pics/comparison_t2v.png" alt="Final Generation" width="1500" />
               <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">LaTexBlend-V: Inference pipeline for customized T2V generation.</p> 
-                Concept representations obtained from T2I fine-tuning can be seamlessly combined in the Latent Textual Space 
-                for direct multi-concept customized T2V inference, without the need for any additional tuning.</figcaption>
+                <p style="font-weight: bold;">Visual comparison of customized T2V generation.</p> 
+                Baselines fail to accurately render subject appearance or follow the motion and context instructed by the prompts.
+                LaTexBlend-V can generate customized subjects in target contexts with natural motion, while preserving precise subject appearances.
+              </figcaption>
             </figure>
 
           </div>
@@ -269,44 +262,15 @@
   </div>
 </section>
 <!-- End paper poster -->
-  
-<section class="hero is-light">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <h2 class="title is-3">Comparisons</h2>
-          <div class="content has-text-justified">
-            <td colspan="3">
-              <p style="margin-top: -12px;">
-              </p>
-            </td>
-  <!-- </td> -->
-          <tr>
-            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
-              <img src="pics/comp1.png" alt="" width="1000" />
-              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
-                Visual Comparisons.
-              </h2>
-            </td>
-          </tr>
-          
-          <tr>
-            <td colspan="3" style="text-align: center; padding-bottom: 30px;">
-              <!-- Ensure image is centered with display block and margin auto -->
-              <img src="pics/comp2.png" alt="" width="1000" style="display: block; margin: 0 auto;" />
-              <!-- Ensure title is centered -->
-              <h2 class="subtitle has-text-center" style="font-size: 15px; text-align: center;">
-                Visual comparison of generations with additional layout conditioning.
-              </h2>
-            </td>
-          </tr>
             
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
+       <p>
+        If you find our work useful, please consider citing it using the following BibTeX entry:
+      </p>
       <pre><code>@inproceedings{jin2025latexblend,
         title={LatexBlend: Scaling Multi-concept Customized Generation with Latent Textual Blending},
         author={Jin, Jian and Zhenbo, Yu and Yang, Shen and Fu, Zhenyong and Yang, Jian},
