@@ -219,22 +219,6 @@
 </section>
 <!-- End paper poster -->
 
-
-<!-- 引入 Bulma Carousel JS -->
-<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
-<script>
-  // 初始化页面上所有的轮播组件
-  bulmaCarousel.attach('#t2vCarousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      infinite: true, // 循环播放
-      autoplay: true,
-      autoplaySpeed: 5000,
-  });
-</script>
-
-  
-
 <!-- Paper poster -->
 <section class="hero is-light">
   <div class="hero-body">
@@ -508,5 +492,19 @@
         carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
       });
     </script>
-  </body>
-  </html>
+
+  <!-- 引入 Bulma Carousel JS -->
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+<script>
+  // 初始化页面上所有的轮播组件
+  bulmaCarousel.attach('#t2vCarousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true, // 循环播放
+      autoplay: true,
+      autoplaySpeed: 5000,
+  });
+</script>
+    
+</body>
+</html>
