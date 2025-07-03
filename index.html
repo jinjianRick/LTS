@@ -93,11 +93,13 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- Insert Image -->
-      <img src="pics/teaser.png" alt="Teaser Image" width="1200px">
+      <img src="pics/teaser_lts.png" alt="Teaser Image" width="1200px">
       <!-- Insert Title -->
       <h2 class="subtitle has-text-left" style="font-size: 13px;">
-        LatexBlend simultaneously addresses two key challenges in scaling multi-concept generation: ensuring high generation quality
-        (including concept fidelity and layout coherence) and maintaining computational efficiency.
+        In this paper, we introduce a novel Latent Textual Space (LTS).
+        We identify that LTS is the pivot in text-conditional diffusion models, offering three key merits for scaling customized generation.
+        We devise a customization framework to embed each individual concept into compact features in LTS, serving as a general concept representation for customized generation.
+        Based on the introduced LTS, we develop inference pipelines for three prominent customized generation tasks, enabling seamless plug-and-play combination of multiple concepts in customized text-to-image generation, customized grounded T2I generation, and customized text-to-video generation.
       </h2>
     </div>
   </div> 
@@ -149,6 +151,7 @@
                   Fine-tuning framework of the proposed LaTexBlend.
                 </p>
                 <p style="text-align: left; margin: 0;">
+                  Latent Textual Space (LTS) follows the text encoder and a linear projection
                   LaTexBlend customizes each concept individually and stores it in a concept bank with compact latent textual features in LTS, serving as a general concept representation for versatile customized generation tasks.
                 </p>
               </figcaption>
