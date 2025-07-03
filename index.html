@@ -292,76 +292,104 @@
               </figcaption>
             </figure>
             
-            <!-- Video Slider Section -->
-            <div class="carousel-container" style="overflow-x: auto; white-space: nowrap; padding-top: 20px; text-align: center;">
+            <!-- Carousel Wrapper -->
+            <div style="position: relative; width: 100%; max-width: 2500px; margin: 0 auto; padding-top: 20px;">
+              
+              <!-- Arrow Buttons -->
+              <button id="prevBtn" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #eee; border: none; font-size: 24px; padding: 10px; cursor: pointer; z-index: 10;">&#10094;</button>
+              <button id="nextBtn" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); background-color: #eee; border: none; font-size: 24px; padding: 10px; cursor: pointer; z-index: 10;">&#10095;</button>
             
-              <!-- Slide 1 -->
-              <div class="carousel-slide" style="display: inline-block; width: 100%; max-width: 2500px; margin-bottom: 30px;">
-                <div class="columns is-centered is-vcentered is-mobile">
-                  <div class="column">
-                    <video width="100%" controls>
-                      <source src="videos/vid1.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
+              <!-- Carousel Inner -->
+              <div id="carouselTrack" style="display: flex; transition: transform 0.5s ease; overflow: hidden;">
+            
+                <!-- Slide 1 -->
+                <div class="carousel-slide" style="min-width: 100%;">
+                  <div class="columns is-centered is-vcentered is-mobile">
+                    <div class="column">
+                      <video width="100%" controls>
+                        <source src="videos/vid1.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="column">
+                      <video width="100%" controls>
+                        <source src="videos/vid2.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="column">
+                      <video width="100%" controls>
+                        <source src="videos/vid3.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="column">
+                      <video width="100%" controls>
+                        <source src="videos/vid4.mp4" type="video/mp4">
+                      </video>
+                    </div>
                   </div>
-                  <div class="column">
-                    <video width="100%" controls>
-                      <source src="videos/vid2.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="column">
-                    <video width="100%" controls>
-                      <source src="videos/vid3.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="column">
-                    <video width="100%" controls>
-                      <source src="videos/vid4.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
+                  <p style="font-size: 13px; text-align: center; font-weight: bold; margin-top: 10px;">
+                    Visual examples of customized T2V generation (Set 1)
+                  </p>
                 </div>
-                <p style="font-size: 13px; text-align: center; font-weight: bold; margin-top: 10px;">
-                  Visual examples of customized T2V generation (Set 1)
-                </p>
-              </div>
             
-              <!-- Slide 2 -->
-              <div class="carousel-slide" style="display: inline-block; width: 100%; max-width: 2500px;">
-                <div class="columns is-centered is-vcentered is-mobile">
-                  <div class="column">
-                    <video width="100%" controls>
-                      <source src="videos/vid5.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
+                <!-- Slide 2 -->
+                <div class="carousel-slide" style="min-width: 100%;">
+                  <div class="columns is-centered is-vcentered is-mobile">
+                    <div class="column">
+                      <video width="100%" controls>
+                        <source src="videos/vid5.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="column">
+                      <video width="100%" controls>
+                        <source src="videos/vid6.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="column">
+                      <video width="100%" controls>
+                        <source src="videos/vid7.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="column">
+                      <video width="100%" controls>
+                        <source src="videos/vid8.mp4" type="video/mp4">
+                      </video>
+                    </div>
                   </div>
-                  <div class="column">
-                    <video width="100%" controls>
-                      <source src="videos/vid6.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="column">
-                    <video width="100%" controls>
-                      <source src="videos/vid7.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  <div class="column">
-                    <video width="100%" controls>
-                      <source src="videos/vid8.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
+                  <p style="font-size: 13px; text-align: center; font-weight: bold; margin-top: 10px;">
+                    Visual examples of customized T2V generation (Set 2)
+                  </p>
                 </div>
-                <p style="font-size: 13px; text-align: center; font-weight: bold; margin-top: 10px;">
-                  Visual examples of customized T2V generation (Set 2)
-                </p>
-              </div>
             
+              </div>
             </div>
+            
+            <!-- JavaScript to control carousel -->
+            <script>
+              const track = document.getElementById('carouselTrack');
+              const prevBtn = document.getElementById('prevBtn');
+              const nextBtn = document.getElementById('nextBtn');
+              let currentSlide = 0;
+              const totalSlides = 2;
+            
+              function updateCarousel() {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+              }
+            
+              prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                  currentSlide--;
+                  updateCarousel();
+                }
+              });
+            
+              nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                  currentSlide++;
+                  updateCarousel();
+                }
+              });
+            </script>
+
 
 
 
