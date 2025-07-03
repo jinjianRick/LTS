@@ -283,7 +283,6 @@
 
             <!-- Subsection 3 -->
             <h3 class="title is-4 has-text-centered">Customized T2V Generation</h3>
-            <p></p>
             
             <!-- Concept Bank Image -->
             <figure style="text-align: center;">
@@ -293,74 +292,66 @@
               </figcaption>
             </figure>
             
-            <!-- T2V Video Carousel -->
-            <div class="container" style="min-height: 224px; margin-top: 20px;">
+            <!-- Carousel Section -->
+            <div class="container" style="margin-top: 30px;">
               <div id="t2vCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <div class="carousel-inner">
+                <div class="carousel-inner" style="overflow: hidden;">
             
                   <!-- Slide 1 -->
                   <div class="carousel-item active">
-                    <table width="100%" align="center">
-                      <tbody>
-                        <tr>
-                          <th><video width="224" autoplay loop muted src="./assets/results/vid1.mp4"></video></th>
-                          <th><video width="224" autoplay loop muted src="./assets/results/vid2.mp4"></video></th>
-                          <th><video width="224" autoplay loop muted src="./assets/results/vid3.mp4"></video></th>
-                          <th><video width="224" autoplay loop muted src="./assets/results/vid4.mp4"></video></th>
-                        </tr>
-                        <tr>
-                          <td colspan="4" style="text-align: center; padding-top: 10px;">
-                            <div class="caption">Visual results of customized T2V generation from various subject prompts</div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="columns is-centered is-mobile is-multiline">
+                      <div class="column is-one-quarter has-text-centered">
+                        <video width="100%" autoplay loop muted src="./assets/results/vid1.mp4"></video>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <video width="100%" autoplay loop muted src="./assets/results/vid2.mp4"></video>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <video width="100%" autoplay loop muted src="./assets/results/vid3.mp4"></video>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <video width="100%" autoplay loop muted src="./assets/results/vid4.mp4"></video>
+                      </div>
+                    </div>
+                    <p class="has-text-centered" style="font-size: 14px;">
+                      Visual results of customized T2V generation from various subject prompts.
+                    </p>
                   </div>
             
                   <!-- Slide 2 -->
                   <div class="carousel-item">
-                    <table width="100%" align="center">
-                      <tbody>
-                        <tr>
-                          <th><video width="224" autoplay loop muted src="./assets/results/vid5.mp4"></video></th>
-                          <th><video width="224" autoplay loop muted src="./assets/results/vid6.mp4"></video></th>
-                          <th><video width="224" autoplay loop muted src="./assets/results/vid7.mp4"></video></th>
-                          <th><video width="224" autoplay loop muted src="./assets/results/vid8.mp4"></video></th>
-                        </tr>
-                        <tr>
-                          <td colspan="4" style="text-align: center; padding-top: 10px;">
-                            <div class="caption">Each video accurately follows the prompt with subject consistency and dynamic motion</div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="columns is-centered is-mobile is-multiline">
+                      <div class="column is-one-quarter has-text-centered">
+                        <video width="100%" autoplay loop muted src="./assets/results/vid5.mp4"></video>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <video width="100%" autoplay loop muted src="./assets/results/vid6.mp4"></video>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <video width="100%" autoplay loop muted src="./assets/results/vid7.mp4"></video>
+                      </div>
+                      <div class="column is-one-quarter has-text-centered">
+                        <video width="100%" autoplay loop muted src="./assets/results/vid8.mp4"></video>
+                      </div>
+                    </div>
+                    <p class="has-text-centered" style="font-size: 14px;">
+                      Each video accurately follows the prompt with subject consistency and dynamic motion.
+                    </p>
                   </div>
-            
-                  <!-- Add more slides here if needed -->
-            
                 </div>
             
-                <!-- Carousel Controls -->
+                <!-- Controls -->
                 <a class="carousel-control-prev" href="#t2vCarousel" role="button" data-slide="prev">
-                  <div class="slider-navigation-previous" style="top: 40%">
-                    <svg viewBox="0 0 50 80" xml:space="preserve">
-                      <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
-                    </svg>
-                  </div>
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#t2vCarousel" role="button" data-slide="next">
-                  <div class="slider-navigation-next" style="top: 40%">
-                    <svg viewBox="0 0 50 80" xml:space="preserve">
-                      <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
-                    </svg>
-                  </div>
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
               </div>
             </div>
+
 
 
 
