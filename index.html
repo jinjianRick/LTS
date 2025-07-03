@@ -218,6 +218,28 @@
 <!-- End paper poster -->
 
 
+
+
+<!-- 引入 Bulma CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<!-- 引入 Bulma Carousel CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
+
+<!-- 引入 Bulma Carousel JS -->
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+<script>
+  // 初始化页面上所有的轮播组件
+  bulmaCarousel.attach('#t2vCarousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true, // 循环播放
+      autoplay: true,
+      autoplaySpeed: 5000,
+  });
+</script>
+
+  
+
 <!-- Paper poster -->
 <section class="hero is-light">
   <div class="hero-body">
@@ -282,110 +304,103 @@
             </figure>
 
             <!-- Subsection 3 -->
-            <!-- Subsection 3: Customized T2V Generation with Carousel -->
+            <!-- Subsection 3: Customized T2V Generation with Bulma Carousel -->
             <h3 class="title is-4 has-text-centered">Customized T2V Generation</h3>
-            <p></p> <!-- 保留一个空 p 标签以维持间距，如果需要的话 -->
+            <p></p>
             
             <!-- 1. Concept Bank Image -->
-            <figure style="text-align: center; margin-bottom: 2rem;"> <!-- 增加一些底部边距 -->
-              <img src="pics/concept_bank.png" alt="Concept Bank" width="1024" style="max-width: 100%; height: auto;" />
-              <figcaption style="font-size: 1.1em; font-weight: bold; margin-top: 10px;">
-                Concept Bank
-              </figcaption>
+            <figure class="image is-16by9" style="max-width: 1024px; margin: 0 auto 2rem auto;">
+              <img src="pics/concept_bank.png" alt="Concept Bank">
             </figure>
+            <p class="has-text-centered is-size-6 has-text-weight-bold" style="margin-top: -1.5rem; margin-bottom: 2rem;">
+              Concept Bank
+            </p>
             
-            <!-- 2. Carousel for Video Comparisons -->
-            <div class="container" style="max-width: 1080px; margin: auto;"> <!-- 限制轮播组件的宽度并居中 -->
-              <div id="t2vCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <!-- Carousel Inner Content -->
-                <div class="carousel-inner">
-                  <!-- Slide 1 -->
-                  <div class="carousel-item active">
-                    <div class="columns is-multiline is-centered">
-                      <!-- Video 1 -->
-                      <div class="column is-one-quarter">
-                        <video autoplay muted loop playsinline width="100%">
-                          <source src="videos/video1_1.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
+            <!-- 2. Carousel for Video Comparisons using Bulma Carousel -->
+            <div class="container" style="max-width: 1080px; margin: auto;">
+              <!-- 'carousel' class is from bulma-carousel -->
+              <div id="t2vCarousel" class="carousel">
+                
+                <!-- Slide 1 -->
+                <div class="item-1">
+                  <div class="card">
+                    <div class="card-content" style="padding: 1.5rem;">
+                      <!-- Bulma grid for videos -->
+                      <div class="columns is-centered is-vcentered">
+                        <!-- Video 1 -->
+                        <div class="column is-one-quarter has-text-centered">
+                          <video autoplay muted loop playsinline width="100%">
+                            <source src="videos/video1_1.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                        <!-- Video 2 -->
+                        <div class="column is-one-quarter has-text-centered">
+                          <video autoplay muted loop playsinline width="100%">
+                            <source src="videos/video1_2.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                        <!-- Video 3 -->
+                        <div class="column is-one-quarter has-text-centered">
+                          <video autoplay muted loop playsinline width="100%">
+                            <source src="videos/video1_3.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                        <!-- Video 4 -->
+                        <div class="column is-one-quarter has-text-centered">
+                          <video autoplay muted loop playsinline width="100%">
+                            <source src="videos/video1_4.mp4" type="video/mp4">
+                          </video>
+                        </div>
                       </div>
-                      <!-- Video 2 -->
-                      <div class="column is-one-quarter">
-                        <video autoplay muted loop playsinline width="100%">
-                          <source src="videos/video1_2.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
+                      <!-- Common Caption -->
+                      <div class="content has-text-centered" style="margin-top: 1rem;">
+                        <p class="is-size-6">A <strong class="has-text-info">harry potter toy</strong> and a <strong class="has-text-danger">Corgi</strong> are surfing.</p>
                       </div>
-                      <!-- Video 3 -->
-                      <div class="column is-one-quarter">
-                        <video autoplay muted loop playsinline width="100%">
-                          <source src="videos/video1_3.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <!-- Video 4 -->
-                      <div class="column is-one-quarter">
-                        <video autoplay muted loop playsinline width="100%">
-                          <source src="videos/video1_4.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                    </div>
-                    <div class="carousel-caption" style="position: relative; right: auto; left: auto; bottom: auto; padding: 1rem; color: #363636; text-align: center; font-size: 1.1em;">
-                      <p>A <span style="font-weight: bold; color: steelblue;">harry potter toy</span> and a <span style="font-weight: bold; color: tomato;">Corgi</span> are surfing.</p>
                     </div>
                   </div>
-            
-                  <!-- Slide 2 -->
-                  <div class="carousel-item">
-                    <div class="columns is-multiline is-centered">
-                      <!-- Video 1 -->
-                      <div class="column is-one-quarter">
-                        <video autoplay muted loop playsinline width="100%">
-                          <source src="videos/video2_1.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <!-- Video 2 -->
-                      <div class="column is-one-quarter">
-                        <video autoplay muted loop playsinline width="100%">
-                          <source src="videos/video2_2.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <!-- Video 3 -->
-                      <div class="column is-one-quarter">
-                        <video autoplay muted loop playsinline width="100%">
-                          <source src="videos/video2_3.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                      <!-- Video 4 -->
-                      <div class="column is-one-quarter">
-                        <video autoplay muted loop playsinline width="100%">
-                          <source src="videos/video2_4.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                    </div>
-                    <div class="carousel-caption" style="position: relative; right: auto; left: auto; bottom: auto; padding: 1rem; color: #363636; text-align: center; font-size: 1.1em;">
-                      <p>A <span style="font-weight: bold; color: steelblue;">harry potter toy</span> is driving a car on a road.</p>
-                    </div>
-                  </div>
-                  
-                  <!-- Add more .carousel-item blocks for more slides -->
-            
                 </div>
             
-                <!-- Carousel Controls -->
-                <a class="carousel-control-prev" href="#t2vCarousel" role="button" data-slide="prev" style="width: 5%; filter: invert(1);">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#t2vCarousel" role="button" data-slide="next" style="width: 5%; filter: invert(1);">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
+                <!-- Slide 2 -->
+                <div class="item-2">
+                  <div class="card">
+                    <div class="card-content" style="padding: 1.5rem;">
+                      <!-- Bulma grid for videos -->
+                      <div class="columns is-centered is-vcentered">
+                        <!-- Video 1 -->
+                        <div class="column is-one-quarter has-text-centered">
+                          <video autoplay muted loop playsinline width="100%">
+                            <source src="videos/video2_1.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                        <!-- Video 2 -->
+                        <div class="column is-one-quarter has-text-centered">
+                          <video autoplay muted loop playsinline width="100%">
+                            <source src="videos/video2_2.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                        <!-- Video 3 -->
+                        <div class="column is-one-quarter has-text-centered">
+                          <video autoplay muted loop playsinline width="100%">
+                            <source src="videos/video2_3.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                        <!-- Video 4 -->
+                        <div class="column is-one-quarter has-text-centered">
+                          <video autoplay muted loop playsinline width="100%">
+                            <source src="videos/video2_4.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                      <!-- Common Caption -->
+                      <div class="content has-text-centered" style="margin-top: 1rem;">
+                        <p class="is-size-6">A <strong class="has-text-info">harry potter toy</strong> is driving a car on a road.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Add more .item-X blocks here for more slides -->
+            
               </div>
             </div>
 
