@@ -160,10 +160,15 @@
             </p>
             <figure style="text-align: center;">
               <img src="pics/t2i_pipeline.png" alt="Latent Textual Space" width="1500" />
-              <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">LaTexBlend-I: Inference pipeline for customized T2I generation.</p> 
-                Concepts from the bank can be seamlessly combined in the Latent Textual Space for multi-concept customized T2I generation.
-                The blending is achieved through latent feature replacement and can be further enhanced with blending guidance.</figcaption>
+              <figcaption style="font-size: 13px; text-align: left; margin-top: 5px;">
+                <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
+                  LaTexBlend-I: Inference pipeline for customized T2I generation.
+                </p>
+                <p style="text-align: left; margin: 0;">
+                  Concepts from the bank can be seamlessly combined in the Latent Textual Space for multi-concept customized T2I generation.
+                  The blending is achieved through latent feature replacement and can be further enhanced with blending guidance.
+                </p>
+              </figcaption>
             </figure>
 
             <!-- Subsection 3 -->
@@ -172,11 +177,16 @@
             </p>
             <figure style="text-align: center;">
               <img src="pics/gt2i_pipeline.png" alt="Concept Blending" width="1500" />
-              <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">LaTexBlend-G: Inference pipeline for customized ground T2I generation.</p> 
-                LaTexBlend-G achieves customized grounded T2I generation that involves synthesizing multiple customized concepts in specified regions. 
-                Concepts from the bank are blended in Latent Textual Space and processed through Local Cross-Attention mechanisms.
-                The local latents are integrated into a base latent by a Dynamic Aggregator to seamlessly render the concepts in the target regions.</figcaption>
+              <figcaption style="font-size: 13px; text-align: left; margin-top: 5px;">
+                <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
+                  LaTexBlend-G: Inference pipeline for customized ground T2I generation.
+                </p>
+                <p style="text-align: left; margin: 0;">
+                  LaTexBlend-G achieves customized grounded T2I generation that involves synthesizing multiple customized concepts in specified regions. 
+                  Concepts from the bank are blended in Latent Textual Space and processed through Local Cross-Attention mechanisms.
+                  The local latents are integrated into a base latent by a Dynamic Aggregator to seamlessly render the concepts in the target regions.
+                </p>
+              </figcaption>
             </figure>
 
             <!-- Subsection 4 -->
@@ -185,10 +195,15 @@
             </p>
             <figure style="text-align: center;">
               <img src="pics/t2v_pipeline.png" alt="Final Generation" width="1500" />
-              <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">LaTexBlend-V: Inference pipeline for customized T2V generation.</p> 
-                Concept representations obtained from T2I fine-tuning can be seamlessly combined in the Latent Textual Space 
-                for direct multi-concept customized T2V inference, without the need for any additional tuning.</figcaption>
+              <figcaption style="font-size: 13px; text-align: left; margin-top: 5px;">
+                <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
+                  LaTexBlend-V: Inference pipeline for customized T2V generation.
+                </p>
+                <p style="text-align: left; margin: 0;">
+                  Concept representations obtained from T2I fine-tuning can be seamlessly combined in the Latent Textual Space 
+                  for direct multi-concept customized T2V inference, without the need for any additional tuning.
+                </p>
+              </figcaption>
             </figure>
 
           </div>
@@ -215,13 +230,18 @@
             </p>
             <figure style="text-align: center;">
               <img src="pics/comparison_t2i.png" alt="Latent Textual Space" width="2500" />
-              <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">Visual comparison of customized T2I generation.</p> 
-                We compare LaTexBlend-I with recent, competitive baselines. The baselines exhibit issues like subject omission and 
-                significant degradation in concept fidelity.
-                In contrast, LaTexBlend-I renders multiple subjects to the query context with high fidelity and coherent layouts, 
-                while also capturing complex semantics such as inter-subject interactions and actions.
+              <figcaption style="font-size: 13px; text-align: left; margin-top: 5px;">
+                <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
+                  Visual comparison of customized T2I generation.
+                </p>
+                <p style="text-align: left; margin: 0;">
+                  The baselines exhibit issues like subject omission and 
+                  significant degradation in concept fidelity.
+                  In contrast, LaTexBlend-I renders multiple subjects to the query context with high fidelity and coherent layouts, 
+                  while also capturing complex semantics such as inter-subject interactions and actions.
+                </p>
               </figcaption>
+              
             </figure>
 
             <!-- Subsection 2 -->
@@ -230,10 +250,14 @@
             </p>
             <figure style="text-align: center;">
               <img src="pics/comparison_gt2i.png" alt="Concept Blending" width="2500" />
-              <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">Visual comparison of customized grounded T2I generation.</p> 
-                Baselines typically suffer from issues such as subject omission and degradation of concept fidelity.
-                LaTexBlend-G can generate customized subjects in the target regions with high concept fidelity and prompt adherence.
+              <figcaption style="font-size: 13px; text-align: left; margin-top: 5px;">
+                <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
+                  Visual comparison of customized grounded T2I generation.
+                </p>
+                <p style="text-align: left; margin: 0;">
+                  Baselines typically suffer from issues such as subject omission and degradation of concept fidelity.
+                  LaTexBlend-G can generate customized subjects in the target regions with high concept fidelity and prompt adherence.
+                </p>
               </figcaption>
             </figure>
 
@@ -243,10 +267,14 @@
             </p>
             <figure style="text-align: center;">
               <img src="pics/comparison_t2v.png" alt="Final Generation" width="2500" />
-              <figcaption style="font-size: 13px;">
-                <p style="font-weight: bold;">Visual comparison of customized T2V generation.</p> 
-                Baselines fail to accurately render subject appearance or follow the motion and context instructed by the prompts.
-                LaTexBlend-V can generate customized subjects in target contexts with natural motion, while preserving precise subject appearances.
+              <figcaption style="font-size: 13px; text-align: left; margin-top: 5px;">
+                <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
+                  Visual comparison of customized T2V generation.
+                </p>
+                <p style="text-align: left; margin: 0;">
+                  Baselines fail to accurately render subject appearance or follow the motion and context instructed by the prompts.
+                  LaTexBlend-V can generate customized subjects in target contexts with natural motion, while preserving precise subject appearances.
+                </p>
               </figcaption>
             </figure>
 
