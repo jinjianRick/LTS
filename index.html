@@ -268,88 +268,106 @@
             <!-- Subsection 3 -->
             <h3 class="title is-4 has-text-centered">Customized T2V Generation</h3>
             
-            <!-- 第一排：三张图片，每张图片上方有标题 -->
-            <div class="columns is-centered has-text-centered mt-5">
-              <div class="column is-one-third">
-                <h4 class="title is-6">Image Title 1</h4>
-                <img src="pics/image1.png" alt="Image 1" style="width: 100%; border-radius: 8px;" />
+            <!-- ====== CASE 1 底色大框开始 ====== -->
+            <div style="background-color: #eef2f5; border-radius: 12px; padding: 3rem 1.5rem 1.5rem 1.5rem; position: relative; margin-top: 2rem; margin-bottom: 2rem;">
+              
+              <!-- 左上角 CASE 1 标签 -->
+              <div style="position: absolute; top: 0; left: 0; background-color: #363636; color: #fff; padding: 6px 16px; border-top-left-radius: 12px; border-bottom-right-radius: 12px; font-weight: bold; font-size: 1rem; letter-spacing: 1px;">
+                CASE 1
               </div>
-              <div class="column is-one-third">
-                <h4 class="title is-6">Image Title 2</h4>
-                <img src="pics/image2.png" alt="Image 2" style="width: 100%; border-radius: 8px;" />
-              </div>
-              <div class="column is-one-third">
-                <h4 class="title is-6">Image Title 3</h4>
-                <img src="pics/image3.png" alt="Image 3" style="width: 100%; border-radius: 8px;" />
-              </div>
-            </div>
 
-            <!-- 第二部分：视频网格（3行4列） -->
-            <!-- 每一列上方有标题 -->
-            <div class="columns is-centered has-text-centered mt-6" style="margin-bottom: 0;">
-              <div class="column is-one-quarter">
-                <h4 class="title is-6">Baseline A</h4>
+              <!-- 第一排：三张图片，每张图片上方有标题 -->
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-one-third">
+                  <h4 class="title is-6">Image Title 1</h4>
+                  <img src="pics/image1.png" alt="Image 1" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+                </div>
+                <div class="column is-one-third">
+                  <h4 class="title is-6">Image Title 2</h4>
+                  <img src="pics/image2.png" alt="Image 2" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+                </div>
+                <div class="column is-one-third">
+                  <h4 class="title is-6">Image Title 3</h4>
+                  <img src="pics/image3.png" alt="Image 3" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+                </div>
               </div>
-              <div class="column is-one-quarter">
-                <h4 class="title is-6">Baseline B</h4>
-              </div>
-              <div class="column is-one-quarter">
-                <h4 class="title is-6">Baseline C</h4>
-              </div>
-              <div class="column is-one-quarter">
-                <h4 class="title is-6">Ours (LaTexBlend-V)</h4>
-              </div>
-            </div>
 
-            <!-- 视频第一行 -->
-            <div class="columns is-centered" style="margin-bottom: 0;">
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_1_1.mp4" style="width: 100%; border-radius: 8px;"></video>
+              <!-- 第二部分：视频网格（3行4列） -->
+              <!-- 每一列上方有标题 -->
+              <div class="columns is-centered has-text-centered mt-5" style="margin-bottom: 0;">
+                <div class="column is-one-quarter">
+                  <h4 class="title is-6">Baseline A</h4>
+                </div>
+                <div class="column is-one-quarter">
+                  <h4 class="title is-6">Baseline B</h4>
+                </div>
+                <div class="column is-one-quarter">
+                  <h4 class="title is-6">Baseline C</h4>
+                </div>
+                <div class="column is-one-quarter">
+                  <h4 class="title is-6">Ours (LaTexBlend-V)</h4>
+                </div>
               </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_1_2.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_1_3.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_1_4.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-            </div>
 
-            <!-- 视频第二行 -->
-            <div class="columns is-centered" style="margin-bottom: 0;">
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_2_1.mp4" style="width: 100%; border-radius: 8px;"></video>
+              <!-- 视频第一行 -->
+              <div class="columns is-centered" style="margin-bottom: 0;">
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_1_1.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_1_2.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_1_3.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_1_4.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
               </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_2_2.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_2_3.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_2_4.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-            </div>
 
-            <!-- 视频第三行 -->
-            <div class="columns is-centered">
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_3_1.mp4" style="width: 100%; border-radius: 8px;"></video>
+              <!-- 视频第二行 -->
+              <div class="columns is-centered" style="margin-bottom: 0;">
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_2_1.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_2_2.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_2_3.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_2_4.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
               </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_3_2.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_3_3.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-              <div class="column is-one-quarter">
-                <video autoplay controls muted loop playsinline src="videos/vid_3_4.mp4" style="width: 100%; border-radius: 8px;"></video>
-              </div>
-            </div>
 
-            <!-- 底部文字说明 -->
+              <!-- 视频第三行 -->
+              <div class="columns is-centered">
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_3_1.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_3_2.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_3_3.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+                <div class="column is-one-quarter">
+                  <video autoplay controls muted loop playsinline src="videos/vid_3_4.mp4" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"></video>
+                </div>
+              </div>
+
+              <!-- 视频下方的小标题 Prompt -->
+              <div class="has-text-centered mt-4">
+                <p style="font-size: 1.15rem; font-weight: 600; font-family: 'Courier New', Courier, monospace; color: #2c3e50;">
+                  "prompt: A dog playing a guitar"
+                </p>
+              </div>
+
+            </div>
+            <!-- ====== CASE 1 底色大框结束 ====== -->
+
+            <!-- 整个 Subsection 的底部文字说明 -->
             <div class="has-text-left mt-3" style="font-size: 13px;">
               <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
                 Visual comparison of customized T2V generation.
