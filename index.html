@@ -266,28 +266,99 @@
             </figure>
 
             <!-- Subsection 3 -->
-            <h3 class="title is-4 has-text-centered" >Customized T2V Generation</h3>
-            <p>
-            </p>
-            <figure style="text-align: center;">
-              <img src="pics/comparison_t2v.png" alt="Final Generation" width="2500" />
-              <figcaption style="font-size: 13px; text-align: left; margin-top: 5px;">
-                <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
-                  Visual comparison of customized T2V generation.
-                </p>
-                <p style="text-align: left; margin: 0;">
-                  Baselines fail to accurately render subject appearance or follow the motion and context instructed by the prompts.
-                  LaTexBlend-V can generate customized subjects in target contexts with natural motion, while preserving precise subject appearances.
-                </p>
-              </figcaption>
-            </figure>
+            <h3 class="title is-4 has-text-centered">Customized T2V Generation</h3>
+            
+            <!-- 第一排：三张图片，每张图片上方有标题 -->
+            <div class="columns is-centered has-text-centered mt-5">
+              <div class="column is-one-third">
+                <h4 class="title is-6">Image Title 1</h4>
+                <img src="pics/image1.png" alt="Image 1" style="width: 100%; border-radius: 8px;" />
+              </div>
+              <div class="column is-one-third">
+                <h4 class="title is-6">Image Title 2</h4>
+                <img src="pics/image2.png" alt="Image 2" style="width: 100%; border-radius: 8px;" />
+              </div>
+              <div class="column is-one-third">
+                <h4 class="title is-6">Image Title 3</h4>
+                <img src="pics/image3.png" alt="Image 3" style="width: 100%; border-radius: 8px;" />
+              </div>
+            </div>
 
+            <!-- 第二部分：视频网格（3行4列） -->
+            <!-- 每一列上方有标题 -->
+            <div class="columns is-centered has-text-centered mt-6" style="margin-bottom: 0;">
+              <div class="column is-one-quarter">
+                <h4 class="title is-6">Baseline A</h4>
+              </div>
+              <div class="column is-one-quarter">
+                <h4 class="title is-6">Baseline B</h4>
+              </div>
+              <div class="column is-one-quarter">
+                <h4 class="title is-6">Baseline C</h4>
+              </div>
+              <div class="column is-one-quarter">
+                <h4 class="title is-6">Ours (LaTexBlend-V)</h4>
+              </div>
+            </div>
 
+            <!-- 视频第一行 -->
+            <div class="columns is-centered" style="margin-bottom: 0;">
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_1_1.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_1_2.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_1_3.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_1_4.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+            </div>
 
+            <!-- 视频第二行 -->
+            <div class="columns is-centered" style="margin-bottom: 0;">
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_2_1.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_2_2.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_2_3.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_2_4.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+            </div>
 
+            <!-- 视频第三行 -->
+            <div class="columns is-centered">
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_3_1.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_3_2.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_3_3.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+              <div class="column is-one-quarter">
+                <video autoplay controls muted loop playsinline src="videos/vid_3_4.mp4" style="width: 100%; border-radius: 8px;"></video>
+              </div>
+            </div>
 
-
-
+            <!-- 底部文字说明 -->
+            <div class="has-text-left mt-3" style="font-size: 13px;">
+              <p style="font-weight: bold; text-align: center; margin-bottom: 4px;">
+                Visual comparison of customized T2V generation.
+              </p>
+              <p style="text-align: left; margin: 0;">
+                Baselines fail to accurately render subject appearance or follow the motion and context instructed by the prompts.
+                LaTexBlend-V can generate customized subjects in target contexts with natural motion, while preserving precise subject appearances.
+              </p>
+            </div>
 
 
           </div>
